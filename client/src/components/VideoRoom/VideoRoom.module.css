@@ -1,0 +1,43 @@
+.room {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0d0f1a;
+  overflow: hidden;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  margin-top: 60px; /* navbar height */
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  transition: flex 0.25s ease;
+}
+
+.localVideo {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  width: 180px;
+  height: 101px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid rgba(99,102,241,0.5);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  z-index: 50;
+  cursor: pointer;
+  transform: scaleX(-1); /* mirror mode */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.localVideo:hover {
+  box-shadow: 0 12px 40px rgba(99,102,241,0.4);
+  border-color: rgba(99,102,241,0.8);
+}

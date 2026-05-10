@@ -1,0 +1,80 @@
+.card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111320;
+  border: 1px solid rgba(255,255,255,0.06);
+  aspect-ratio: 16/9;
+  transition: transform 0.2s;
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0.6rem 0.75rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.peerId {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.75);
+  font-family: monospace;
+  background: rgba(0,0,0,0.35);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+}
+
+.actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.actionBtn {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.actionBtn:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+.mutedBtn {
+  background: rgba(239,68,68,0.25);
+  border-color: rgba(239,68,68,0.4);
+}
